@@ -1,0 +1,9 @@
+services:
+  webapp:
+    image: node:lts-bullseye
+    working_dir: /app
+    ports:
+      - '3000:3000'
+    command: bash -c "npm install && npm run dev"
+    volumes:
+      - './webapp:/app'
